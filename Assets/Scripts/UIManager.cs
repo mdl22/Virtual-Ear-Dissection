@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] Button controlsButton;
     [SerializeField] Button controlsExitButton;
+    [SerializeField] Button showAllButton;
+    [SerializeField] Button hideAllButton;
     [SerializeField] Button resetButton;
     [SerializeField] Button areasButton;
     [SerializeField] Button backButton;
@@ -53,7 +55,13 @@ public class UIManager : MonoBehaviour
         {
             button.onClick.AddListener(() => { ToggleModel(button); });
         }
-        controlsExitButton.GetComponent<Button>().onClick.AddListener(ActivateModels);
+
+        controlsExitButton.GetComponent<Button>().onClick.AddListener(() =>
+            { ActivateModels(true); });
+        showAllButton.GetComponent<Button>().onClick.AddListener(() =>
+            { ActivateModels(true); });
+        hideAllButton.GetComponent<Button>().onClick.AddListener(() =>
+            { ActivateModels(false); });
 
         backButton.GetComponent<Button>().onClick.AddListener(() =>
             { ResetAreasPanel(true); });
@@ -85,21 +93,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void ActivateModels()
+    void ActivateModels(bool active)
     {
         foreach (GameObject model in models)
         {
-            model.SetActive(!model.name.Contains("Cut"));
+            //model.SetActive(active);
+            model.SetActive(model.name.Contains("Cut") ? false : active);
         }
 
         foreach (Button button in modelButtons)
         {
             button.GetComponentInChildren<TextMeshProUGUI>().color =
-                button.name.Contains("Cut") ? inactivecolour : activecolour;
+                !active || button.name.Contains("Cut") ? inactivecolour : activecolour;
         }
-
-        areasButton.gameObject.SetActive(false);
-        ClosePanels(false);
     }
 
     public void ClosePanels(bool active)
