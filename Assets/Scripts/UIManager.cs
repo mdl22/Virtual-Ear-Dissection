@@ -97,7 +97,6 @@ public class UIManager : MonoBehaviour
     {
         foreach (GameObject model in models)
         {
-            //model.SetActive(active);
             model.SetActive(model.name.Contains("Cut") ? false : active);
         }
 
