@@ -468,7 +468,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1625409434}
+      - m_Target: {fileID: 542329913}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ClosePanels
         m_Mode: 6
@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329913}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ClosePanels
         m_Mode: 6
@@ -2479,6 +2479,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515778080}
   m_CullTransparentMesh: 1
+--- !u!1001 &542329910
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8711455656734656947, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: InnerEarRegion
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -3398650495490269656, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: TensorTympani
+      objectReference: {fileID: 0}
+    - target: {fileID: -2847218954956894584, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: CutBone
+      objectReference: {fileID: 0}
+    - target: {fileID: -2847218954956894584, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1070550125653765331, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: TympanicMembrane
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: Ear Models
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068138335281814185, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+      propertyPath: m_Name
+      value: ChordaTympani
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+--- !u!1 &542329911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c4889b9365600b7aa893668b6ff3fda, type: 3}
+  m_PrefabInstance: {fileID: 542329910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &542329912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542329911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9cd6c3154ec2d5daf81a337b6bc09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlsPanel: {fileID: 969302283}
+  minOrthographicSize: 250
+  maxOrthographicSize: 1000
+  scale: 1000
+--- !u!114 &542329913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542329911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e567a8064ecd2cc8499c9ac3037177a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelButtonsParent: {fileID: 1183084372}
+  areaButtonsParent: {fileID: 320459505}
+  controlsButton: {fileID: 922654736}
+  controlsExitButton: {fileID: 65470182}
+  showAllButton: {fileID: 860887786}
+  hideAllButton: {fileID: 1211927383}
+  resetButton: {fileID: 1687516254}
+  areasButton: {fileID: 2014380928}
+  backButton: {fileID: 908643780}
+  showButton: {fileID: 1073716202}
+  findButton: {fileID: 1925848313}
+  controlsPanel: {fileID: 969302284}
+  areasPanel: {fileID: 1453796604}
+  panelTitleText: {fileID: 1909048663}
+  panelListText: {fileID: 33513079}
+  areaTitleText: {fileID: 1028623168}
+  areaDescriptionText: {fileID: 359376266}
+--- !u!114 &542329914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542329911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f11c1112f033d8895acbe2ab71c9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549964501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3888,7 +4031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329913}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ResetAreasPanel
         m_Mode: 6
@@ -4035,7 +4178,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625409434}
+      - m_Target: {fileID: 542329913}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
@@ -4435,7 +4578,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -4582,7 +4725,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -4999,7 +5142,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -6120,7 +6263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -7014,7 +7157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -7076,173 +7219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f11c1112f033d8895acbe2ab71c9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1625409431
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8711455656734656947, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: InnerEarRegion
-      objectReference: {fileID: 0}
-    - target: {fileID: -8711455656734656947, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -7579103995338469470, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4905339134748312007, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3774956230918578139, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3398650495490269656, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: TensorTympani
-      objectReference: {fileID: 0}
-    - target: {fileID: -3398650495490269656, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2847218954956894584, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: CutBone
-      objectReference: {fileID: 0}
-    - target: {fileID: -2847218954956894584, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1070550125653765331, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: ExternalEar
-      objectReference: {fileID: 0}
-    - target: {fileID: -1070550125653765331, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: Ear Models
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208892355200453316, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068138335281814185, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_Name
-      value: ChordaTympani
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068138335281814185, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
---- !u!1 &1625409432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2fad43c7522ccdbe3be096caae32260f, type: 3}
-  m_PrefabInstance: {fileID: 1625409431}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1625409433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625409432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9cd6c3154ec2d5daf81a337b6bc09e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlsPanel: {fileID: 969302283}
-  minOrthographicSize: 250
-  maxOrthographicSize: 1000
-  scale: 1000
---- !u!114 &1625409434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625409432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e567a8064ecd2cc8499c9ac3037177a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelButtonsParent: {fileID: 1183084372}
-  areaButtonsParent: {fileID: 320459505}
-  controlsButton: {fileID: 922654736}
-  controlsExitButton: {fileID: 65470182}
-  showAllButton: {fileID: 860887786}
-  hideAllButton: {fileID: 1211927383}
-  resetButton: {fileID: 1687516254}
-  areasButton: {fileID: 2014380928}
-  backButton: {fileID: 908643780}
-  showButton: {fileID: 1073716202}
-  findButton: {fileID: 1925848313}
-  controlsPanel: {fileID: 969302284}
-  areasPanel: {fileID: 1453796604}
-  panelTitleText: {fileID: 1909048663}
-  panelListText: {fileID: 33513079}
-  areaTitleText: {fileID: 1028623168}
-  areaDescriptionText: {fileID: 359376266}
 --- !u!1 &1643242666
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,7 +7304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -7610,7 +7586,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
@@ -8763,7 +8739,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 542329914}
         m_TargetAssemblyTypeName: ButtonDetector, Assembly-CSharp
         m_MethodName: SetIsPointerOverButtonFalse
         m_Mode: 1
