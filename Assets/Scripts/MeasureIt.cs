@@ -8,20 +8,21 @@ To prevent your lines and arrows from clipping into your 3D geometry (so they al
 Step 2: Write the Measurement Script
 
 Attach this script to an empty GameObject in Unity to control your start point, end point, line width, and arrow settings.
-csharp*/
-
+csharp
+*/
 using UnityEngine;
 using TMPro;
 
 [RequireComponent(typeof(LineRenderer))]
-public class UnityMeasureIt : MonoBehaviour
+public class MeasureIt : MonoBehaviour
 {
     [Header("Points")]
     public Transform startPoint;
     public Transform endPoint;
 
     [Header("Line Settings")]
-    public float lineWidth = 0.05px;
+    //public float lineWidth = 0.05px;
+    public float lineWidth = 0.05f;
     public Color measurementColor = Color.yellow;
     
     [Header("Text settings")]

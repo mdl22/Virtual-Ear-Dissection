@@ -107,7 +107,7 @@ public class ClickOnArea : MonoBehaviour
                 {
                     SetEmissionColor(0);
 
-                    GetComponentInParent<UIManager>().ResetAreasPanel(true);
+                    GetComponentInParent<UIManager>().ResetLabelsPanel(true);
                 }
                 else
                 {
@@ -119,7 +119,7 @@ public class ClickOnArea : MonoBehaviour
                     areaTitleText.text = areas[areasKey][0];
                     areaDescriptionText.text = areas[areasKey][1];
 
-                    GetComponentInParent<UIManager>().ResetAreasPanel(false);
+                    GetComponentInParent<UIManager>().ResetLabelsPanel(false);
                 }
             }
         }
@@ -239,7 +239,7 @@ public class ClickOnArea : MonoBehaviour
                     string.Concat(areas[areasKey][1], "\n\nParent region: ",
                     areas[areasKey][2].ToLower());
 
-                GetComponentInParent<UIManager>().ResetAreasPanel(false);
+                GetComponentInParent<UIManager>().ResetLabelsPanel(false);
 
                 inShowMode = true;      // set to false in SetEmissionColor
                 break;

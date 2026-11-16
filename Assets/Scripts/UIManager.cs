@@ -10,25 +10,17 @@ using UnityEditor;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject modelButtonsParent;
-    [SerializeField] GameObject areaButtonsParent;
+    [SerializeField] GameObject labelButtonsParent;
 
     [SerializeField] Button controlsButton;
     [SerializeField] Button controlsExitButton;
     [SerializeField] Button showAllButton;
     [SerializeField] Button hideAllButton;
     [SerializeField] Button resetButton;
-    [SerializeField] Button areasButton;
-    [SerializeField] Button backButton;
-    [SerializeField] Button showButton;
-    [SerializeField] Button findButton;
+    [SerializeField] Button labelsButton;
 
     [SerializeField] Image controlsPanel;
-    [SerializeField] Image areasPanel;
-
-    [SerializeField] TextMeshProUGUI panelTitleText;
-    [SerializeField] TextMeshProUGUI panelListText;
-    [SerializeField] TextMeshProUGUI areaTitleText;
-    [SerializeField] TextMeshProUGUI areaDescriptionText;
+    [SerializeField] Image labelsPanel;
 
     List<GameObject> models = new List<GameObject>();
     Button[] modelButtons;
@@ -40,7 +32,7 @@ public class UIManager : MonoBehaviour
     float startOrthographicSize;
 
     Color32 activecolour = new Color32 (50, 50, 50, 255);
-    Color32 inactivecolour = new Color32 (200, 200, 200, 255);
+    Color32 inactivecolour = new Color32 (250, 250, 250, 255);
 
     void Start()
     {
@@ -63,14 +55,8 @@ public class UIManager : MonoBehaviour
         hideAllButton.GetComponent<Button>().onClick.AddListener(() =>
             { ActivateModels(false); });
 
-        backButton.GetComponent<Button>().onClick.AddListener(() =>
-            { ResetAreasPanel(true); });
-
         controlsExitButton.GetComponent<Button>().onClick.AddListener(ResetModels);
         resetButton.GetComponent<Button>().onClick.AddListener(ResetModels);
-
-        showButton.onClick.AddListener(() => { ActivateShowPanel(true); });
-        findButton.onClick.AddListener(() => { ActivateShowPanel(false); });
 
         startPosition = transform.position;
         startRotation = transform.rotation;
@@ -112,23 +98,14 @@ public class UIManager : MonoBehaviour
         controlsPanel.gameObject.SetActive(active);
         controlsButton.gameObject.SetActive(!active);
 
-        areasPanel.gameObject.SetActive(false);
+        labelsPanel.gameObject.SetActive(false);
 
-        ResetAreasPanel(true);
+        ResetLabelsPanel(true);
     }
 
-    public void ResetAreasPanel(bool active)
+    public void ResetLabelsPanel(bool active)
     {
-        panelTitleText.gameObject.SetActive(active);
-        panelListText.gameObject.SetActive(active);
-
-        areaTitleText.gameObject.SetActive(!active);
-        areaDescriptionText.gameObject.SetActive(!active);
-
-        backButton.gameObject.SetActive(!active);
-        showButton.gameObject.SetActive(active);
-        findButton.gameObject.SetActive(false);
-        foreach (Button button in areaButtonsParent.GetComponentsInChildren<Button>())
+        foreach (Button button in labelButtonsParent.GetComponentsInChildren<Button>())
         {
             button.gameObject.SetActive(false);
             button.interactable = true;
@@ -144,25 +121,6 @@ public class UIManager : MonoBehaviour
         Camera.main.orthographicSize = startOrthographicSize;
     }
 
-    void ActivateShowPanel(bool show)
-    {
-        panelTitleText.gameObject.SetActive(!show);
-        panelListText.gameObject.SetActive(!show);
-
-        areaTitleText.gameObject.SetActive(false);
-        areaDescriptionText.gameObject.SetActive(false);
-
-        backButton.gameObject.SetActive(!show);
-        showButton.gameObject.SetActive(!show);
-        findButton.gameObject.SetActive(show);
-        areaButtonsParent.gameObject.SetActive(show);
-
-        foreach (Button button in areaButtonsParent.GetComponentsInChildren<Button>())
-        {
-            button.interactable = true;
-        }
-    }
-	
     public void Exit()
     {
 #if UNITY_EDITOR
