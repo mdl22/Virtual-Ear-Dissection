@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
 
     List<GameObject> models = new List<GameObject>();
     Button[] modelButtons;
+    Button[] labelButtons;
 
     Quaternion startRotation;
 
@@ -42,10 +43,15 @@ public class UIManager : MonoBehaviour
         }
 
         modelButtons = modelButtonsParent.GetComponentsInChildren<Button>();
-
         foreach (Button button in modelButtons)
         {
             button.onClick.AddListener(() => { ToggleModel(button); });
+        }
+
+        labelButtons = labelButtonsParent.GetComponentsInChildren<Button>();
+        foreach (Button button in labelButtons)
+        {
+            button.onClick.AddListener(() => { ToggleLabelButton(button); });
         }
 
         controlsExitButton.GetComponent<Button>().onClick.AddListener(() =>
@@ -69,14 +75,32 @@ public class UIManager : MonoBehaviour
     {
         foreach (GameObject model in models)
         {
-            if (model.name == clicked.name.Split()[0])
+            if (clicked.name.Split()[0] == model.name)
             {
                 model.SetActive(!model.activeSelf);
 
                 clicked.GetComponentInChildren<TextMeshProUGUI>().color = model.activeSelf ? 
                     activecolour : inactivecolour;
+
+                foreach (Button button in labelButtons)
+                {
+                    if (button.name == clicked.name)
+                    {
+                        button.gameObject.SetActive(model.activeSelf);
+                    }
+                }
+
+                break;
             }
         }
+    }
+
+    void ToggleLabelButton(Button clicked)
+    {
+        Color32 textcolour = clicked.GetComponentInChildren<TextMeshProUGUI>().color;
+
+                clicked.GetComponentInChildren<TextMeshProUGUI>().color =
+                    textcolour.r == activecolour.r ? inactivecolour : activecolour;
     }
 
     void ActivateModels(bool active)
@@ -90,6 +114,11 @@ public class UIManager : MonoBehaviour
         {
             button.GetComponentInChildren<TextMeshProUGUI>().color =
                 !active || button.name.Contains("Cut") ? inactivecolour : activecolour;
+        }
+
+        foreach (Button button in labelButtons)
+        {
+            button.gameObject.SetActive(active);
         }
     }
 
@@ -107,9 +136,14 @@ public class UIManager : MonoBehaviour
     {
         foreach (Button button in labelButtonsParent.GetComponentsInChildren<Button>())
         {
-            button.gameObject.SetActive(false);
-            button.interactable = true;
-         }
+            foreach (GameObject model in models)
+            {
+                if (button.name.Split()[0] == model.name)
+                {
+                    button.gameObject.SetActive(model.activeSelf);
+                }
+            }
+        }
     }
 
     public void ResetModels()
