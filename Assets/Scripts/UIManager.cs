@@ -19,10 +19,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button resetButton;
     [SerializeField] Button labelsButton;
 
+    [SerializeField] TextAsset labelTable;
+
     [SerializeField] Image controlsPanel;
     [SerializeField] Image labelsPanel;
 
     List<GameObject> models = new List<GameObject>();
+    Dictionary<string, string[]> labels = new Dictionary<string, string[]>();
     Button[] modelButtons;
     Button[] labelButtons;
 
@@ -69,6 +72,25 @@ public class UIManager : MonoBehaviour
 
         startCameraPosition = Camera.main.transform.position;
         startOrthographicSize = Camera.main.orthographicSize;
+
+        /*foreach (string line in maskTable.text.Split("\n"))
+        {
+            string[] fields = line.Split("\t");
+            
+            if (line.Length > 0 && Char.IsDigit(fields[0][0]))  // ignore EOF, header
+            {
+                if (Char.IsLetter(fields[2][0]))    // ignore blank fields
+                {
+                    areas.Add(fields[0],            // value
+                        new string[] {fields[2],    // name
+                                      fields[3],    // description
+                                      fields[4]});  // parent region
+                    panelListText.text += string.Concat(fields[2], "\n\n");
+                }
+
+                maps.Add(fields[0], emissionMaps[maps.Count]);
+            }
+        }*/
     }
 
     void ToggleModel(Button clicked)
@@ -129,10 +151,10 @@ public class UIManager : MonoBehaviour
 
         labelsPanel.gameObject.SetActive(false);
 
-        ResetLabelsPanel(true);
+        ResetLabelsPanel();
     }
 
-    public void ResetLabelsPanel(bool active)
+    public void ResetLabelsPanel()
     {
         foreach (Button button in labelButtonsParent.GetComponentsInChildren<Button>())
         {

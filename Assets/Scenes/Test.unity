@@ -2287,6 +2287,7 @@ MonoBehaviour:
   hideAllButton: {fileID: 1211927383}
   resetButton: {fileID: 1687516254}
   labelsButton: {fileID: 2014380928}
+  labelTable: {fileID: 4900000, guid: ea9cf7c7c1c75544193e4fa88488a35d, type: 3}
   controlsPanel: {fileID: 969302284}
   labelsPanel: {fileID: 1453796604}
 --- !u!114 &542329914
