@@ -100,6 +100,8 @@ public class UIManager : MonoBehaviour
                     if (button.name == clicked.name)
                     {
                         button.gameObject.SetActive(model.activeSelf);
+                        button.GetComponentInChildren<TextMeshProUGUI>().color = activecolour;
+                        panelListText.text = "";
                     }
                 }
 
@@ -112,6 +114,10 @@ public class UIManager : MonoBehaviour
     {
         Color32 textcolour = clicked.GetComponentInChildren<TextMeshProUGUI>().color;
 
+        foreach (Button button in labelButtons)
+        {
+            button.GetComponentInChildren<TextMeshProUGUI>().color = activecolour;
+        }
         clicked.GetComponentInChildren<TextMeshProUGUI>().color =
             textcolour.r == activecolour.r ? inactivecolour : activecolour;
 
@@ -161,6 +167,8 @@ public class UIManager : MonoBehaviour
                 if (button.name.Split()[0] == model.name)
                 {
                     button.gameObject.SetActive(model.activeSelf);
+                    button.GetComponentInChildren<TextMeshProUGUI>().color = activecolour;
+                    panelListText.text = "";
                 }
             }
         }
