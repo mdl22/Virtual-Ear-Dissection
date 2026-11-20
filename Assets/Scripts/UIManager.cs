@@ -19,13 +19,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button resetButton;
     [SerializeField] Button labelsButton;
 
-    [SerializeField] TextAsset labelTable;
-
     [SerializeField] Image controlsPanel;
     [SerializeField] Image labelsPanel;
 
+    [SerializeField] TextAsset labelTable;
+
+    [SerializeField] TextMeshProUGUI panelListText;
+
     List<GameObject> models = new List<GameObject>();
-    Dictionary<string, string[]> labels = new Dictionary<string, string[]>();
+    Dictionary<string, string> labels = new Dictionary<string, string>();
     Button[] modelButtons;
     Button[] labelButtons;
 
@@ -73,24 +75,13 @@ public class UIManager : MonoBehaviour
         startCameraPosition = Camera.main.transform.position;
         startOrthographicSize = Camera.main.orthographicSize;
 
-        /*foreach (string line in maskTable.text.Split("\n"))
+        foreach (string line in labelTable.text.Split("\n"))
         {
-            string[] fields = line.Split("\t");
-            
-            if (line.Length > 0 && Char.IsDigit(fields[0][0]))  // ignore EOF, header
+            if (line.Length > 0)
             {
-                if (Char.IsLetter(fields[2][0]))    // ignore blank fields
-                {
-                    areas.Add(fields[0],            // value
-                        new string[] {fields[2],    // name
-                                      fields[3],    // description
-                                      fields[4]});  // parent region
-                    panelListText.text += string.Concat(fields[2], "\n\n");
-                }
-
-                maps.Add(fields[0], emissionMaps[maps.Count]);
+                labels.Add(line.Split(":")[0], line.Split(":")[1]);
             }
-        }*/
+        }
     }
 
     void ToggleModel(Button clicked)
@@ -121,8 +112,15 @@ public class UIManager : MonoBehaviour
     {
         Color32 textcolour = clicked.GetComponentInChildren<TextMeshProUGUI>().color;
 
-                clicked.GetComponentInChildren<TextMeshProUGUI>().color =
-                    textcolour.r == activecolour.r ? inactivecolour : activecolour;
+        clicked.GetComponentInChildren<TextMeshProUGUI>().color =
+            textcolour.r == activecolour.r ? inactivecolour : activecolour;
+
+        string[] labelList = labels[clicked.name.Split()[0]].Split("\t");
+
+        panelListText.text = "";
+        int count = 0;
+        foreach (string label in labelList)
+            panelListText.text += string.Concat((++count).ToString(), ") ", label, "\n");
     }
 
     void ActivateModels(bool active)

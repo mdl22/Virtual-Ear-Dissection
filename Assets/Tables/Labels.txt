@@ -1,5 +1,5 @@
-Bone	Internal auditory meatus	Facial canal	Eustachian tube	Petrotympanic fissure	Promontory	Aditus to mastoid antrum
-External Ear	External auditory meatus
-Inner Ear	Round window	Oval window	Cochlea	superior semicircular canal	Horizontal semicircular canal	Posterior semicircular canal
-Nerves	Vestibulocochlear nerve	Facial nerve	Geniculate ganglion	Greater petrosal nerve	Nerve to stapedius	Tympanic branch of glossopharyngeal nerve	Tympanic plexus	lesser petrosal nerve
-Ossicles	Malleus	incus	Stapes	Footplate of stapes
+Bone:Internal auditory meatus	Facial canal	Eustachian tube	Petrotympanic fissure	Promontory	Aditus to mastoid antrum
+ExternalEar:External auditory meatus
+InnerEarRegion:Round window	Oval window	Cochlea	Superior semicircular canal	Horizontal semicircular canal	Posterior semicircular canal
+Nerves:Vestibulocochlear nerve	Facial nerve	Geniculate ganglion	Greater petrosal nerve	Nerve to stapedius	Tympanic branch of glossopharyngeal nerve	Tympanic plexus	lesser petrosal nerve
+Ossicles:Malleus	Incus	Stapes	Footplate of stapes
